@@ -7,9 +7,11 @@ edition = "2021"
 tonic = "0.7"
 tokio = { version = "1.0", features = ["rt-multi-thread", "macros", "sync", "time"] }
 prost = "0.10"
-chiral_db = { package = "chiral-db", git = "https://github.com/chiral-data/chiral-db.git", branch = "f-docker" }
-chiral_db_sources = { package = "chiral-db-sources", git = "https://github.com/chiral-data/chiral-db-sources.git", branch = "f-chiral-db" }
-
+serde = "1.0.97"
+serde_derive = "1.0"
+chiral-db = "0.1.0"
+# chiral_db = { package = "chiral-db", git = "https://github.com/chiral-data/chiral-db.git" }
+# chiral_db = { package = "chiral-db", path = "../chiral-db" }
 
 [build-dependencies]
 tonic-build = "0.7"

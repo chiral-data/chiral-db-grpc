@@ -1,0 +1,6 @@
+[[fp_doc]]
+name = "ChEMBL"
+kind = "OpenBabelECFP4"
+nbits = 2048
+filepath = "./data/chembl_30_chemreps_10k.txt"
+source = "Chembl"
