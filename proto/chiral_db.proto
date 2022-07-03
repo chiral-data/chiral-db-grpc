@@ -1,0 +1,27 @@
+syntax = "proto3";
+package chiraldb;
+
+service ChiralDb {
+    rpc GetDescription(RequestDescription) returns (ReplyDescription) {}
+    rpc QuerySimilarity(RequestSimilarity) returns (ReplySimilarity) {}
+}
+
+message RequestDescription {}
+
+message ReplyDescription {
+    string desc = 1;
+}
+
+message Molecule {
+    string smiles = 1;
+}
+
+message RequestSimilarity {
+    Molecule mol = 1;
+    float cutoff = 2;
+    string doc_name = 3;
+}
+
+message ReplySimilarity {
+    map<string, float> results = 1;
+}

@@ -1,0 +1,25 @@
+[package]
+name = "chiral-db-grpc"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tonic = "0.7"
+tokio = { version = "1.0", features = ["rt-multi-thread", "macros", "sync", "time"] }
+prost = "0.10"
+serde = "1.0.97"
+serde_derive = "1.0"
+chiral-db = "0.1.0"
+# chiral_db = { package = "chiral-db", git = "https://github.com/chiral-data/chiral-db.git" }
+# chiral_db = { package = "chiral-db", path = "../chiral-db" }
+
+[build-dependencies]
+tonic-build = "0.7"
+
+[[bin]]
+name = "chiral-db-server"
+path = "src/server.rs"
+
+[[bin]]
+name = "chiral-db-client"
+path = "src/client.rs"
